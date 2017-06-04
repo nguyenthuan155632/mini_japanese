@@ -1,0 +1,31 @@
+ion-col {
+    text-align: center;
+    font-size: 30px;
+
+    hr {
+        margin: 0px;
+    }
+
+    span {
+        font-size: 18px;
+        line-height: 25px;
+        display: block;
+    }
+}
+
+.alphabet .item-wrapper {
+    background: #daeeff; 
+}
+
+.tenten .item-wrapper {
+    background: #ffc2c2;
+}
+
+.combination {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.combination .item-wrapper {
+    background: #dbffcd;
+}
