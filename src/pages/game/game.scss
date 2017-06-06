@@ -1,3 +1,26 @@
-page-game {
-
+.game-page {
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .blur-card {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.5;
+    }
+    .card-title {
+        position: absolute;
+        top: 42%;
+        font-size: 2.5em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+    }
 }

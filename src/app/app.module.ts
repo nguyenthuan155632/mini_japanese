@@ -11,7 +11,10 @@ import { AlphabetHiraganaPage } from '../pages/alphabet-hiragana/alphabet-hiraga
 import { AlphabetKatakanaPage } from '../pages/alphabet-katakana/alphabet-katakana';
 import { VocabularyPage } from '../pages/vocabulary/vocabulary';
 import { CommunicationPage } from '../pages/communication/communication';
+import { WordModalPage } from '../pages/word-modal/word-modal';
+import { GameSettingsModalPage } from '../pages/game-settings-modal/game-settings-modal';
 import { GamePage } from '../pages/game/game';
+import { GameHaraganaRomajiPage } from '../pages/game-haragana-romaji/game-haragana-romaji';
 
 // Services
 import { WordService } from './../services/word.service';
@@ -40,7 +43,10 @@ export const firebaseConfig = {
     AlphabetKatakanaPage,
     VocabularyPage,
     CommunicationPage,
-    GamePage
+    GamePage,
+    GameHaraganaRomajiPage,
+    WordModalPage,
+    GameSettingsModalPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,10 @@ export const firebaseConfig = {
     AlphabetKatakanaPage,
     VocabularyPage,
     CommunicationPage,
-    GamePage
+    GamePage,
+    GameHaraganaRomajiPage,
+    WordModalPage,
+    GameSettingsModalPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,46 @@
+<!--
+  Generated template for the GameHaraganaRomajiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Haragana-Romaji</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="haragana-romaji-wrapper">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4>
+                <div class="box-time" block text-center>{{ time_countdown }}</div>
+            </ion-col>
+            <ion-col col-4>
+                <div class="score" text-center>85</div>
+            </ion-col>
+            <ion-col col-4>
+                <div class="score" text-right>0/100</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="box-game-wrapper">
+            <div class="box-game" block text-center>あ</div>
+        </ion-row>
+        <ion-row class="box-pass-wrapper">
+            <button class="box-pass" block text-center (click)="onPass()">Pass</button>
+        </ion-row>
+        <ion-row class="box-input-wrapper">
+            <ion-col col-12>
+                <ion-list>
+                    <ion-item>
+                        <ion-label floating>Input</ion-label>
+                        <ion-input type="text" text-center [value]="inputWord" [(ngModel)]="inputWord"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

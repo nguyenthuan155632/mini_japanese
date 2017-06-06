@@ -6,13 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>game</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Trò chơi</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="game-page">
+    <ion-card (click)="onGameSettings('ha-ro')">
+        <div class="blur-card"></div>
+        <img src="assets/img/bg-card.jpg" />
+        <div class="card-title">Haragana - Romaji</div>
+    </ion-card>
 </ion-content>

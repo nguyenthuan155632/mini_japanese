@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
 import { WordService } from './../../services/word.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { WordModalPage } from './../word-modal/word-modal';
 
 /**
  * Generated class for the CommunicationPage page.
@@ -18,14 +19,22 @@ export class CommunicationPage {
 
   words: FirebaseListObservable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private wordService: WordService) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private wordService: WordService, 
+              public modalCtrl: ModalController,
+              public loadingCtrl: LoadingController) {
 
     this.words = wordService.getWords();
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CommunicationPage');
+  }
+
+  onWordDetail(word: any) {
+    let wordModal = this.modalCtrl.create(WordModalPage, { data: word });
+    wordModal.present();
   }
 
 }
