@@ -27,12 +27,12 @@
             <div class="box-game" block text-center><span>{{ japanese_char }}</span></div>
         </ion-row>
         <ion-row class="box-pass-wrapper" *ngIf="!isEnded">
-            <ion-col col-3 *ngFor="let r of randomWords">
+            <ion-col col-4 *ngFor="let r of randomWords">
                 <button ion-button (click)="onPass(r)" [disabled]="isClickedButton" [class.right]="r === right" [class.wrong]="r === wrong">{{ r }}</button>
             </ion-col>
         </ion-row>
         <ion-row class="box-pass-wrapper" *ngIf="!isEnded">
-            <ion-col col-3 *ngFor="let r of randomWords2">
+            <ion-col col-4 *ngFor="let r of randomWords2">
                 <button ion-button (click)="onPass(r)" [disabled]="isClickedButton" [class.right]="r === right" [class.wrong]="r === wrong">{{ r }}</button>
             </ion-col>
         </ion-row>

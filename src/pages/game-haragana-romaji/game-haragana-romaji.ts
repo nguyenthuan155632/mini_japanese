@@ -163,10 +163,10 @@ export class GameHaraganaRomajiPage {
     this.wrong = '';
     this.isClickedButton = false;
 
-    this.randomWords = this.getRandom(Settings.ALPHABET_ARRAY, 7, answer);
+    this.randomWords = this.getRandom(Settings.ALPHABET_ARRAY, 5, answer);
     this.randomWords.push(answer);
     this.randomWords = this.shuffle(this.randomWords);
-    this.randomWords2 = this.randomWords.splice(0, 4);
+    this.randomWords2 = this.randomWords.splice(0, 3);
   }
   
 
