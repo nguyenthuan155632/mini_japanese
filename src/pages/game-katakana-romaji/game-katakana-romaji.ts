@@ -82,6 +82,11 @@ export class GameKatakanaRomajiPage {
       this.nativeAudio.play('wrongAnswer');
       this.wrong = r;
     }
+    clearInterval(this.intervalGame);
+    setTimeout(() => {
+      this.switchWord();
+    }, 1000);
+    this.onPlayGame();
   }
 
   onStartGaming(timer: number) {
