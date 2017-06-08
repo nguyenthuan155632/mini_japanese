@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class GameSettingsModalPage {
 
-  arrCharacters: string[] = [];
+  arrWords: string[] = [];
+  timeCountdown: string = '3';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
     
@@ -24,17 +25,20 @@ export class GameSettingsModalPage {
   }
 
   onDismiss() {
-    let data = this.arrCharacters;
+    let data = {
+      words: this.arrWords,
+      time: this.timeCountdown
+    };
     this.viewCtrl.dismiss(data);
   }
 
-  updateArrayCharacters(character: string, isChecked: any) {
-    if(isChecked.checked) {
-      this.arrCharacters.push(character);
+  updateArrayCharacters(character: string, event: any) {
+    if(event.checked) {
+      this.arrWords.push(character);
     }
     else {
-      let index = this.arrCharacters.indexOf(character);
-      this.arrCharacters.splice(index, 1);
+      let index = this.arrWords.indexOf(character);
+      this.arrWords.splice(index, 1);
     }
   }
 

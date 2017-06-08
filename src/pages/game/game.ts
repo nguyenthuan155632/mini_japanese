@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { GameHaraganaRomajiPage } from './../game-haragana-romaji/game-haragana-romaji';
+import { GameKatakanaRomajiPage } from './../game-katakana-romaji/game-katakana-romaji';
 import { GameSettingsModalPage } from './../game-settings-modal/game-settings-modal';
 
 /**
@@ -27,10 +28,10 @@ export class GamePage {
     let gameSettingsModal = this.modalCtrl.create(GameSettingsModalPage);
     gameSettingsModal.onDidDismiss(data => {
       if(type == 'ha-ro') {
-        this.navCtrl.push(GameHaraganaRomajiPage, { gameSettings: data });
+        this.navCtrl.push(GameHaraganaRomajiPage, { gameSettings: data.words, timeCountdown: data.time });
       }
-      else {
-
+      else if(type == 'ka-ro') {
+        this.navCtrl.push(GameKatakanaRomajiPage, { gameSettings: data.words, timeCountdown: data.time });
       }
    });
     gameSettingsModal.present();

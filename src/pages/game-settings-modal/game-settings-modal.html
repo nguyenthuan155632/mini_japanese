@@ -130,6 +130,35 @@
                     </ion-list>
                 </ion-col>
             </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-list radio-group [(ngModel)]="timeCountdown">
+                        <ion-list-header>
+                            Time
+                        </ion-list-header>
+                        <ion-item>
+                            <ion-label>1 giây</ion-label>
+                            <ion-radio value="1"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>2 giây</ion-label>
+                            <ion-radio value="2"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>3 giây</ion-label>
+                            <ion-radio checked="true" value="3"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>4 giây</ion-label>
+                            <ion-radio value="4"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>5 giây</ion-label>
+                            <ion-radio value="5"></ion-radio>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
         </ion-grid>
         <!--<h4 text-center>Sẽ lấy tất cả nếu bạn không chọn chữ cái nào</h4>-->
         <button ion-button block color="secondary" (click)="onDismiss()">Play</button>

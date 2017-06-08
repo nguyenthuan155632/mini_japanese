@@ -4,19 +4,19 @@ import { Settings } from './../../config/settings';
 import { NativeAudio } from '@ionic-native/native-audio';
 
 /**
- * Generated class for the GameHaraganaRomajiPage page.
+ * Generated class for the GameKatakanaRomajiPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-game-haragana-romaji',
-  templateUrl: 'game-haragana-romaji.html',
+  selector: 'page-game-katakana-romaji',
+  templateUrl: 'game-katakana-romaji.html',
 })
-export class GameHaraganaRomajiPage {
+export class GameKatakanaRomajiPage {
 
-  words: string[] = [];
+ words: string[] = [];
   arrWords: string[] = [];
   time_countdown: number;
   objectWords: object[] = [];
@@ -58,7 +58,7 @@ export class GameHaraganaRomajiPage {
 
     for(let aW of this.arrWords) {
       let obj: any = {};
-      obj[aW] = Settings.HARAGANA_ALPHABET_MAP_DICTIONARY[aW];
+      obj[aW] = Settings.KATAKANA_ALPHABET_MAP_DICTIONARY[aW];
       this.objectWords.push(obj);
     }
 

@@ -11,10 +11,13 @@ import { AlphabetHiraganaPage } from '../pages/alphabet-hiragana/alphabet-hiraga
 import { AlphabetKatakanaPage } from '../pages/alphabet-katakana/alphabet-katakana';
 import { VocabularyPage } from '../pages/vocabulary/vocabulary';
 import { CommunicationPage } from '../pages/communication/communication';
+import { GrammarPage } from '../pages/grammar/grammar';
 import { WordModalPage } from '../pages/word-modal/word-modal';
 import { GameSettingsModalPage } from '../pages/game-settings-modal/game-settings-modal';
 import { GamePage } from '../pages/game/game';
 import { GameHaraganaRomajiPage } from '../pages/game-haragana-romaji/game-haragana-romaji';
+import { GameKatakanaRomajiPage } from '../pages/game-katakana-romaji/game-katakana-romaji';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 // Services
 import { WordService } from './../services/word.service';
@@ -43,10 +46,12 @@ export const firebaseConfig = {
     AlphabetKatakanaPage,
     VocabularyPage,
     CommunicationPage,
+    GrammarPage,
     GamePage,
     GameHaraganaRomajiPage,
     WordModalPage,
-    GameSettingsModalPage
+    GameSettingsModalPage,
+    GameKatakanaRomajiPage
   ],
   imports: [
     BrowserModule,
@@ -63,15 +68,18 @@ export const firebaseConfig = {
     AlphabetKatakanaPage,
     VocabularyPage,
     CommunicationPage,
+    GrammarPage,
     GamePage,
     GameHaraganaRomajiPage,
     WordModalPage,
-    GameSettingsModalPage
+    GameSettingsModalPage,
+    GameKatakanaRomajiPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     WordService,
+    NativeAudio,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

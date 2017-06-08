@@ -5,9 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // import { Deploy } from '@ionic/cloud-angular';
 
 import { HomePage } from '../pages/home/home';
-import { CommunicationPage } from '../pages/communication/communication';
-import { GameHaraganaRomajiPage } from '../pages/game-haragana-romaji/game-haragana-romaji';
-import { GamePage } from '../pages/game/game';
+// import { CommunicationPage } from '../pages/communication/communication';
+// import { GameHaraganaRomajiPage } from '../pages/game-haragana-romaji/game-haragana-romaji';
+// import { GamePage } from '../pages/game/game';
 // import { AlphabetPage } from '../pages/alphabet/alphabet';
 // import { AlphabetHiraganaPage } from '../pages/alphabet-hiragana/alphabet-hiragana';
 // import { AlphabetKatakanaPage } from '../pages/alphabet-katakana/alphabet-katakana';
@@ -16,7 +16,7 @@ import { GamePage } from '../pages/game/game';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = GamePage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

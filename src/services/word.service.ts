@@ -11,18 +11,14 @@ export class WordService {
 
     }
 
-    addWord(slug: string, date: string, english: string, japanese: string, romaji: string, vietnamese: string) {
-        // this.words.push(new WordModel(slug, date, english, japanese, romaji, vietnamese));
-    }
-
-    getWords() {
+    getWords(database: string) {
         this.loading = this.loadingCtrl.create({
             spinner: 'bubbles',
             content: 'Please wait...'
         });
         this.loading.present();
         
-        this.words = this.af.list('/words');
+        this.words = this.af.list(database);
         
         setTimeout(() => {
             this.loading.dismiss();

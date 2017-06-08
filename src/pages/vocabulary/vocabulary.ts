@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
+import { WordService } from './../../services/word.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { WordModalPage } from './../word-modal/word-modal';
 
 /**
  * Generated class for the VocabularyPage page.
@@ -14,11 +17,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VocabularyPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  vocabularies: FirebaseListObservable<any>;
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public wordService: WordService, 
+              public modalCtrl: ModalController,
+              public loadingCtrl: LoadingController) {
+
+    this.vocabularies = wordService.getWords('/vocabularies');
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VocabularyPage');
+  }
+
+  onVocabularyDetail(vocabulary: any) {
+    let vocabularyModal = this.modalCtrl.create(WordModalPage, { data: vocabulary });
+    vocabularyModal.present();
   }
 
 }

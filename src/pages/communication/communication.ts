@@ -21,11 +21,11 @@ export class CommunicationPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
-              private wordService: WordService, 
+              public wordService: WordService, 
               public modalCtrl: ModalController,
               public loadingCtrl: LoadingController) {
 
-    this.words = wordService.getWords();
+    this.words = wordService.getWords('/words');
 
   }
 
